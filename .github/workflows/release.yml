@@ -1,0 +1,25 @@
+name: release
+
+# zyx1121/aintern pushes each release's extension here with a vX.Y.Z tag; this zips it and publishes it.
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Zip and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          # The manifest keeps its "key", so every install has the same extension id.
+          grep -q '"key"' extension/manifest.json
+          (cd extension && zip -qr ../aintern-extension.zip .)
+          gh release create "$TAG" aintern-extension.zip --title "$TAG" \
+            --notes "Download aintern-extension.zip, unzip it and load the folder in chrome://extensions (Developer mode, Load unpacked). Extension id: ifbmgcfmalplanmilfnemmalpdnfhlli."
