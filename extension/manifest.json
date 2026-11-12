@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "AIntern",
-  "version": "1.23.1",
+  "version": "1.23.2",
   "description": "Run AIntern workflows on the page you are reading, and fill forms with their results.",
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjztpbSxSy8eyZgN/73xvkDRYkOp0ZJ/AH5/Rt+ugkJkBeMJG7qRf8UEB59cXpJ0/I7wRfzrEkHtFPrBFS+RwGFqRBb86rWAM499fjJbOn98uf4VHu0XRcXc0YBS/c1M2EH8E9RXo6S0fc8khaqNiu/1QD05trs0AjcNnDWGlaSBV3xoE4bASyJVbmm8MrZjHv9Snf7LPsBivs9g4tGPQpPtcaYGbpAvPLYykxnjfR9NUq8scFGeuQ3djMcPB1ufGZr/s1kF7V44U8v4boiYvzXdxPDNsWWopsqzTh+wiKPYfoOFmq0xlNNP0R0sQGjqw/s8P/N3IwOQ1sdbTYBG7zwIDAQAB",
   "action": {
